@@ -52,5 +52,31 @@ public class Main {
 
         System.out.println(" Tri par Nom puis Nombre d'employés : ");
         gestionDep.trierDepartementsParNomEtNombreEmployes();
+
+        //Prosit 10
+        AffectationHashMap affect = new AffectationHashMap();
+
+        affect.ajouterEmployeDepartement(e1, d1);
+        affect.ajouterEmployeDepartement(e2, d2);
+        affect.ajouterEmployeDepartement(e3, d1);
+        affect.ajouterEmployeDepartement(e4, d3);
+
+
+        affect.ajouterEmployeDepartement(e1, d3);
+
+        System.out.println(" Liste des affectations : ");
+        affect.afficherEmployesEtDepartements();
+
+        System.out.println(" Suppression de l'employé Sami : ");
+        affect.supprimerEmploye(e2);
+
+        System.out.println(" Suppression affectation (Leila au département Informatique) : ");
+        affect.supprimerEmployeEtDepartement(e3, d1);
+
+        System.out.println(" Liste après suppressions : ");
+        affect.afficherEmployesEtDepartements();
+
+        System.out.println(" Affectations triées par ID : ");
+        System.out.println(affect.trierMap());
     }
 }
